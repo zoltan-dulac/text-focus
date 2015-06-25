@@ -1,0 +1,61 @@
+@import "compass/css3/transition";
+@import "compass/css3/transform";
+@import "compass/css3/animation";
+
+$maxlines: 4;
+
+* {
+  box-sizing: border-box; 
+}
+
+html {
+  height: 2000px;
+}
+
+body {
+  perspective: 300px;
+  background: black url('../images/space.jpg');
+}
+
+.container {
+  @include transform( rotateX(25deg) scale(0.5));
+  @include transform-origin(50% 100% 0);
+  position: fixed;
+}
+
+.container, .text-focus {
+  
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.text-focus {
+  text-align: center;
+  font-size: 5vw;
+  line-height: 1.2;
+  font-family: "Helvetica", "Arial", sans-serif;
+  position: fixed;
+  @include transform(translateZ(0));
+  
+  //@include transition(transform 0.5s ease-in-out, padding 0.5 ease-in-out);
+  padding-top: 0;
+  
+  
+  
+  > div {
+    color: transparent;
+    @include transition(text-shadow 0.001s ease-in-out);
+    position: relative;
+  }
+  
+  @for $i from 1 through $maxlines {
+    > div:nth-child(#{$i}) {
+      //@include transform( rotateX(-45deg));
+      text-shadow: 0 0 0 #fff;
+      //text-shadow: 0 0 #{($maxlines - $i) * 5}px #000;
+    }
+  }
+  
+  
+}

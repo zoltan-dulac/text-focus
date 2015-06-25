@@ -1,0 +1,74 @@
+/* line 7, ../sass/text-focus.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 11, ../sass/text-focus.scss */
+html {
+  height: 2000px;
+}
+
+/* line 15, ../sass/text-focus.scss */
+body {
+  perspective: 300px;
+  background: black url("../images/space.jpg");
+}
+
+/* line 20, ../sass/text-focus.scss */
+.container {
+  -moz-transform: rotateX(25deg) scale(0.5);
+  -ms-transform: rotateX(25deg) scale(0.5);
+  -webkit-transform: rotateX(25deg) scale(0.5);
+  transform: rotateX(25deg) scale(0.5);
+  -moz-transform-origin: 50% 100% 0 50%;
+  -ms-transform-origin: 50% 100% 0 50%;
+  -webkit-transform-origin: 50% 100% 0 50%;
+  transform-origin: 50% 100% 0 50%;
+  position: fixed;
+}
+
+/* line 26, ../sass/text-focus.scss */
+.container, .text-focus {
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* line 33, ../sass/text-focus.scss */
+.text-focus {
+  text-align: center;
+  font-size: 5vw;
+  line-height: 1.2;
+  font-family: "Helvetica", "Arial", sans-serif;
+  position: fixed;
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  padding-top: 0;
+}
+/* line 46, ../sass/text-focus.scss */
+.text-focus > div {
+  color: transparent;
+  -moz-transition: text-shadow 0.001s ease-in-out;
+  -o-transition: text-shadow 0.001s ease-in-out;
+  -webkit-transition: text-shadow 0.001s ease-in-out;
+  transition: text-shadow 0.001s ease-in-out;
+  position: relative;
+}
+/* line 53, ../sass/text-focus.scss */
+.text-focus > div:nth-child(1) {
+  text-shadow: 0 0 0 #fff;
+}
+/* line 53, ../sass/text-focus.scss */
+.text-focus > div:nth-child(2) {
+  text-shadow: 0 0 0 #fff;
+}
+/* line 53, ../sass/text-focus.scss */
+.text-focus > div:nth-child(3) {
+  text-shadow: 0 0 0 #fff;
+}
+/* line 53, ../sass/text-focus.scss */
+.text-focus > div:nth-child(4) {
+  text-shadow: 0 0 0 #fff;
+}
